@@ -3,7 +3,7 @@ fun main() {
 
     testaContasDiferentes()
 
-
+    println("teste");
 }
 
 
