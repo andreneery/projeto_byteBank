@@ -14,7 +14,7 @@ class Gerente(
         get() {
             // o override serve para alterar o comportamento que vem do funcionario, no caso altera os parametros da função
             //bonificacao do funcionário da classe "pai"
-            return super.bonificacao + salario
+            return salario
         }
     fun autentica(senha: Int): Boolean {
         if(this.senha == senha){

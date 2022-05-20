@@ -1,11 +1,12 @@
-open class Funcionario(
+abstract class Funcionario(
+    // o abstract serve para que a classe possa ser livremente utilizada como herança, considerando as particularidades
+    //de cada funcionario (diretor, gerente, analista)
     val nome: String,
     val cpf: String,
     val salario: Double
 ) {
 
-    open val bonificacao: Double
-        get() {
-            return salario * 0.1
-        }
+    abstract val bonificacao: Double
+    //agora para criar um funcionário há a bonificação exclusiva - não senod permitido utilizar a bonificação de funcionario
+
 }
