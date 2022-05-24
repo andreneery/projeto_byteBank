@@ -2,13 +2,14 @@ class Gerente(
     nome: String,
     cpf: String,
     salario: Double,
-    val senha: Int,
+    senha: Int,
     // para definir herannça podemos colocar os ":"  e indicar qual classe que será herdada
     // quando há atributos com os mesmos nomes da classe "pai" o copilador irá reclamar, não sendo necessário
-) :Funcionario(
+) :FuncionarioAdmin(
     nome = nome,
     cpf = cpf,
-    salario = salario
+    salario = salario,
+    senha = senha
 ){
     override val bonificacao: Double
         get() {
@@ -16,9 +17,4 @@ class Gerente(
             //bonificacao do funcionário da classe "pai"
             return salario
         }
-    fun autentica(senha: Int): Boolean {
-        if(this.senha == senha){
-            return true
-        }; return false
-    }
 }

@@ -9,4 +9,5 @@ abstract class Funcionario(
     abstract val bonificacao: Double
     //agora para criar um funcionário há a bonificação exclusiva - não senod permitido utilizar a bonificação de funcionario
 
+
 }
